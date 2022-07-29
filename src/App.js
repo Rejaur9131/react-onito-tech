@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to Onito</h1>
+      <h1>Welcome to Onito test task</h1>
     </div>
   );
 }
