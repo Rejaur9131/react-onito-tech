@@ -1,14 +1,13 @@
 import "./App.css";
+import Receipt from "./components/Receipt";
+// import ReceiptsTable from "./components/ReceiptsTable";
 
 function App() {
   return (
     <div className="App">
       <h1>Welcome to Onito test task</h1>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate illo
-        numquam minima magnam ad sit. Atque mollitia vero maxime inventore,
-        cumque ex praesentium qui vitae rem. Quaerat consequatur sunt sequi!
-      </p>
+      <Receipt></Receipt>
+      {/* <ReceiptsTable></ReceiptsTable> */}
     </div>
   );
 }
