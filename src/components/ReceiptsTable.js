@@ -1,6 +1,7 @@
 import React from "react";
 
-const ReceiptsTable = ({ receipt }) => {
+const ReceiptsTable = (receipt) => {
+  console.log(receipt);
   const { date, amount, payment, remark } = receipt;
 
   return (

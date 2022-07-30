@@ -15,16 +15,14 @@ const Receipt = () => {
     const amount = amountRef.current.value;
     const payment = paymentRef.current.value;
     const remark = remarkRef.current.value;
-    let receipt = {
+    const receipt = {
       date: date,
       amount: amount,
       payment: payment,
       remark: remark,
     };
-    receipts.push(receipt);
-    // console.log(receipt);
-    // console.log(receipts.length);
 
+    receipts.push(receipt);
     setReceipts(receipts);
     console.log(receipts);
   };
@@ -70,6 +68,7 @@ const Receipt = () => {
         {receipts.map((receipt) => (
           <ReceiptsTable key={receipts.index} receipt={receipt}></ReceiptsTable>
         ))}
+        {/* <ReceiptsTable key={receipts.index} receipts={receipts}></ReceiptsTable> */}
       </form>
     </div>
   );
