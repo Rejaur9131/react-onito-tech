@@ -22,9 +22,7 @@ const Receipt = () => {
       remark: remark,
     };
 
-    receipts.push(receipt);
-    setReceipts(receipts);
-    console.log(receipts);
+    setReceipts((receipts) => [...receipts, receipt]);
   };
   return (
     <div>
@@ -65,10 +63,21 @@ const Receipt = () => {
         />
         <br />
         <button type="submit">Submit</button>
-        {receipts.map((receipt) => (
-          <ReceiptsTable key={receipts.index} receipt={receipt}></ReceiptsTable>
+        {receipts.length > 0 && (
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Payment Mode</th>
+                <th>Remark</th>
+              </tr>
+            </thead>
+          </table>
+        )}
+        {receipts.map((receipt, index) => (
+          <ReceiptsTable key={index} receipt={receipt}></ReceiptsTable>
         ))}
-        {/* <ReceiptsTable key={receipts.index} receipts={receipts}></ReceiptsTable> */}
       </form>
     </div>
   );
